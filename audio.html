@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>戴耳机听</title>
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/audio.css">
+</head>
+<body>
+<div>
+    <div class="top">
+        <i class="iconfont icon-erji2" style="font-size: 30px; cursor: pointer"></i><span style="cursor: pointer"> 戴耳机听</span>
+        <div class="top_search">
+            <input type="text" placeholder="搜索音乐，歌手，歌词，用户">
+            <i class="iconfont icon-chaxun"></i>
+        </div>
+        <span class="user">
+                <i class="iconfont icon-user" title="个人中心"></i>
+                <i class="iconfont icon-shezhi" title="设置"></i>
+        </span>
+    </div>
+    <div class="content">
+        <div class="left_content">
+            <div class="nav">
+                <div class="recommend">
+                    <div class="nav_title"><span>推荐</span></div>
+                    <div class="nav_text">
+                        <span class="iconfont icon-faxian"> 发现音乐</span><br/>
+                        <span class="iconfont icon-shoutiyinxiang"> 私人FM</span><br/>
+                        <span class="iconfont icon-player"> MV</span><br/>
+                        <span class="iconfont icon-users"> 朋友</span><br/>
+                    </div>
+                </div>
+                <div class="local">
+                    <div class="nav_title"><span>我的音乐</span></div>
+                    <div class="nav_text">
+                        <span class="iconfont icon-yinfu1"> 本地音乐</span><br/>
+                        <span class="iconfont icon-xiazai"> 下载管理</span><br/>
+                        <span class="iconfont icon-geshou"> 我的歌手</span><br/>
+                        <span class="iconfont icon-zuijinbofang"> 最近播放</span><br/>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="nav_title"><span>我的歌单</span></div>
+                    <div class="nav_text">
+                        <span class="iconfont icon-xiai1"> 我喜欢的音乐</span><br/>
+                        <span class="iconfont icon-music_playlist"> 我创建的歌单</span><br/>
+                        <span class="iconfont icon-star"> 我收藏的歌单</span><br/>
+                        <span class="iconfont icon-zengjia"> 新建歌单</span><br/>
+                    </div>
+                </div>
+            </div>
+            <div class="music_image">
+                <img src="images/1.png">
+                <div>
+                    <span>七月上</span><br/>
+                    <span>Jam</span>
+                </div>
+                <div>
+                    <span class="xin"><i class="iconfont icon-xin" title="喜欢" style="cursor: pointer"></i></span><br/>
+                    <i class="iconfont icon-fenxiang" title="分享" style="cursor: pointer"></i>
+                </div>
+                <span class="iconfont icon-bofangqi_quanpingfangda" title="展开音乐详情页"></span>
+            </div>
+        </div>
+        <div class="right_content">
+            <div class="musicList">
+                <div class="list_top">
+                    <div class="left_listtop">
+                        <span class="local" style="font-size: 20px">本地音乐</span>
+                        <span class="num" style="font-size: 14px">0首音乐</span>
+                    </div>
+                    <div class="right_listtop">
+                        <span title="列表"><i class="iconfont icon-liebiao"></i></span>
+                        <span title="歌手"><i class="iconfont icon-geshou"></i></span>
+                        <span title="专辑"><i class="iconfont icon-changpian-1"></i></span>
+                        <span title="文件夹"><i class="iconfont icon-shoucang"></i></span>
+                    </div>
+                </div>
+                <div class="list_title">
+                    <div class="no"></div>
+                    <div class="name">音乐标题</div>
+                    <div class="singer">歌手</div>
+                    <div class="zhuanji">专辑</div>
+                    <div class="length">时长</div>
+                    <div class="size">大小</div>
+                </div>
+                <div class="listSong"></div>
+            </div>
+            <div class="playing_song">
+                <div id="bg" class="bg">
+                    <div class="bg-cover"></div>
+                </div>
+                <div class="left_playSong">
+                    <img src="images/play_needle.png" id="needle">
+                    <div class="disk_bg"></div>
+                    <div class="disk" id="disk">
+                        <img class="album" src="images/placeholder_disk_play_song.png" draggable="false">
+                        <img src="images/play_disc.png" draggable="false">
+                    </div>
+                    <div class="bottom_icon">
+                        <span><i class="iconfont icon-xin"></i>喜欢</span><span><i class="iconfont icon-star"></i>收藏</span><span><i class="iconfont icon-xiazai"></i>下载</span><span><i class="iconfont icon-fenxiang"></i>分享</span>
+                    </div>
+                </div>
+                <div class="right_playSong">
+                    <div class="topSong">
+                        <h1></h1>
+                        <strong>专辑:</strong><span id="zhuanji"></span><strong>歌手:</strong><span id="singer"></span>
+                    </div>
+                    <div class="lyric">
+                        <div id="lrc1" class="lyrics"></div>
+                        <div id="lrc2" class="lyrics"></div>
+                        <div id="lrc3" class="lyrics"></div>
+                        <div id="lrc4" class="lyrics"></div>
+                        <div id="lrc5" class="lyrics"></div>
+                        <div id="lrc6" class="lyrics"></div>
+                        <div id="lrc7" class="lyrics"></div>
+                        <div id="lrc8" class="lyrics"></div>
+                        <div id="lrc9" class="lyrics"></div>
+                    </div>
+                </div>
+                <div class="suoxiao"><span class="iconfont icon-bofangqi_quanpingsuoxiao"  title="收起音乐详情页"/></div>
+            </div>
+        </div>
+    </div>
+    <audio src="" id="audio"></audio>
+    <div class="foot">
+        <i class="iconfont icon-kuaitui" title="上一首"></i>
+        <span class="play"><i class="iconfont icon-zanting" title="播放"></i></span>
+        <i class="iconfont icon-kuaijin" title="下一首"></i>
+        <div class="progress">
+            <span class="current_time">00:00</span>
+            <div class="progress_range"><div class="range"></div><div class="circle"></div></div>
+            <span class="total_time">00:00</span>
+        </div>
+        <div class="model">
+            <div class="volume"><span class="iconfont icon-shengyin" title="静音"></span></div>
+            <div class="volume_range"><div class="range"></div><div class="circle"></div></div>
+            <div class="bofangModel"><span class="iconfont icon-suiji"  title="随机播放"></span></div>
+        </div>
+    </div>
+</div>
+</body>
+<script  language="JavaScript" src="JS/audio.js"></script>
+</html>
